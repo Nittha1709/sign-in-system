@@ -1,0 +1,38 @@
+<div class="login-container">
+    <form nz-form (ngSubmit)="onSubmit()" [nzLayout]="'vertical'" class="login-form">
+      <h1>Sign In</h1>
+  
+      <nz-form-item>
+        <nz-form-label [nzFor]="'email'" [nzRequired]="true">Email</nz-form-label>
+        <nz-form-control>
+          <input
+            nz-input
+            id="email"
+            name="email"
+            [(ngModel)]="email"
+            type="email"
+            required
+          />
+        </nz-form-control>
+      </nz-form-item>
+  
+      <nz-form-item>
+        <nz-form-label [nzFor]="'password'" [nzRequired]="true">Password</nz-form-label>
+        <nz-form-control>
+          <input
+            nz-input
+            id="password"
+            name="password"
+            [(ngModel)]="password"
+            type="password"
+            required
+          />
+        </nz-form-control>
+      </nz-form-item>
+  
+      <button nz-button [nzType]="'primary'" [disabled]="isLoading">
+        {{ isLoading ? 'Processing...' : 'Sign In' }}
+      </button>
+    </form>
+  </div>
+  
