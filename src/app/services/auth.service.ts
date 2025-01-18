@@ -7,7 +7,7 @@ import { delay } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/api'; // Mock API URL
+  private apiUrl = 'http://localhost:3000/api'; 
 
   constructor(private http: HttpClient) {}
 
@@ -15,7 +15,7 @@ export class AuthService {
     return of({
       token: 'dummy-token',
       email: email,
-      avatar: 'https://via.placeholder.com/100',
-    }).pipe(delay(3000)); // Mock API Delay
+      avatar: 'https://i.pinimg.com/736x/4b/61/43/4b61432b96d97cda90bb7fca37310194.jpg',
+    }).pipe(delay(3000)); 
   }
 }

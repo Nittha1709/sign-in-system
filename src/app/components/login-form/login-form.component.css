@@ -1,0 +1,61 @@
+.login-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 28.4531rem;
+  padding: 3.75rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.box-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.box-title h1 {
+  margin-bottom: 0.3125rem;
+  color: var(--primary-blue);
+}
+.box-title span {
+  color: var(--color-font-gray);
+  font-size: 1rem;
+}
+
+.ant-input {
+  border-radius: 0.5rem;
+  padding: 0.6875rem;
+}
+.ant-input:hover {
+  border-color: var(--primary-blue);
+}
+.ant-input-focused,
+.ant-input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: none;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #595959;
+}
+
+.toggle-password-btn:hover {
+  color: #1890ff;
+}
+
+.status-message {
+  display: flex;
+  justify-content: center;
+  color: var(--primary-blue);
+}

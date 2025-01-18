@@ -1,38 +1,39 @@
-<div class="login-container">
-    <form nz-form (ngSubmit)="onSubmit()" [nzLayout]="'vertical'" class="login-form">
-      <h1>Sign In</h1>
-  
-      <nz-form-item>
-        <nz-form-label [nzFor]="'email'" [nzRequired]="true">Email</nz-form-label>
-        <nz-form-control>
-          <input
-            nz-input
-            id="email"
-            name="email"
-            [(ngModel)]="email"
-            type="email"
-            required
-          />
-        </nz-form-control>
-      </nz-form-item>
-  
-      <nz-form-item>
-        <nz-form-label [nzFor]="'password'" [nzRequired]="true">Password</nz-form-label>
-        <nz-form-control>
-          <input
-            nz-input
-            id="password"
-            name="password"
-            [(ngModel)]="password"
-            type="password"
-            required
-          />
-        </nz-form-control>
-      </nz-form-item>
-  
-      <button nz-button [nzType]="'primary'" [disabled]="isLoading">
-        {{ isLoading ? 'Processing...' : 'Sign In' }}
-      </button>
-    </form>
-  </div>
-  
+<div class="login-card">
+  <form nz-form [nzLayout]="'vertical'" (ngSubmit)="onSubmit()" class="login-form">
+    <div class="box-title">
+      <h1>Sign In to Your Account</h1>
+      <span>Enter your credentials to access your account.</span>
+    </div>
+
+    <nz-form-item>
+      <nz-form-label [nzFor]="'email'" [nzRequired]="true">Username</nz-form-label>
+      <nz-form-control [nzValidateStatus]="emailStatus" [nzErrorTip]="'Invalid email format!'">
+        <input nz-input id="email" name="email" [(ngModel)]="email" required (ngModelChange)="validateEmail()" />
+      </nz-form-control>
+    </nz-form-item>
+
+
+    <nz-form-item>
+      <nz-form-label [nzFor]="'password'" [nzRequired]="true">Password</nz-form-label>
+      <nz-form-control [nzValidateStatus]="passwordStatus"
+        [nzErrorTip]="'Password must be at least 8 characters long and include letters, numbers, and special characters.'">
+        <input nz-input id="password" name="password" [type]="isPasswordVisible ? 'text' : 'password'"
+          [(ngModel)]="password" required (ngModelChange)="validatePassword()" />
+        <button nz-button nzType="link" class="toggle-password-btn" type="button" (click)="togglePasswordVisibility()">
+          <i nz-icon [nzType]="isPasswordVisible ? 'eye-invisible' : 'eye'" nzTheme="outline"></i>
+        </button>
+
+      </nz-form-control>
+    </nz-form-item>
+
+
+    <div *ngIf="statusMessage" class="status-message">
+      {{ statusMessage }}
+    </div>
+
+    <button nz-button [nzType]="'primary'" [disabled]="isLoading || !isFormValid" [nzLoading]="isLoading" type="submit"
+      class="btn-new-primary">
+      {{ isLoading ? 'Processing...' : 'Sign In' }}
+    </button>
+  </form>
+</div>

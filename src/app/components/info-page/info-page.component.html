@@ -1,9 +1,16 @@
-<div class="info-container">
-    <h2>Account Info</h2>
-    <div>
+<div class="info-card">
+  <div class="box-title-info">
+    <h1>Account Info</h1>
+  </div>
+  <div class="row-avartar">
+    <div class="box-avartar">
       <img [src]="avatarUrl" alt="Avatar" />
     </div>
-    <p><b>Email:</b> {{ email }}</p>
-    <button nz-button nzType="default" (click)="logout()">Log Out</button>
   </div>
-  
+  <div class="box-info">
+    <div class="row-detail">
+      <span class="title">Email:</span>
+      <span class="detail">{{ email }}</span>
+    </div>
+    <button nz-button [nzType]="'primary'" (click)="logout()" class="btn-new-primary">Log Out</button>
+  </div>

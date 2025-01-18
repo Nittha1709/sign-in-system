@@ -1,0 +1,29 @@
+.bg-header {
+  background-color: #fff;
+}
+.bg-footer {
+  background-color: #fff;
+  text-align: center;
+}
+.box-logo {
+  display: inline-block;
+  height: 3.75rem;
+}
+.box-logo img {
+  height: 100%;
+  display: inline-block;
+}
+.row-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+  padding: 1.25rem;
+  min-height: calc(100vh - 8.375rem);
+}

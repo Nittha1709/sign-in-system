@@ -1,4 +1,15 @@
-<!-- NG-ZORRO -->
-<a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
-  <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
-</a>
+<nz-layout>
+  <nz-header class="bg-header">
+    <div class="row-header">
+      <div class="box-logo">
+        <img src="/ttb-logo.jpg" />
+      </div>
+    </div>
+  </nz-header>
+  <nz-content>
+    <div class="inner-content main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+  <nz-footer class="bg-footer">Frontend Assessment ©{{currentYear}} | Powered by Angular Framework</nz-footer>
+</nz-layout>

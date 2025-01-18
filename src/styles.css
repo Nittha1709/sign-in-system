@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-blue: #0050f0;
+  --btn-color: #f68b1f;
+  --btn-hover: #f8a24c;
+  --color-font: #002d63;
+  --color-font-orange: #f68b1f;
+  --color-font-gray: #585858;
+}
+
+.btn-new-primary {
+  margin-top: 1.25rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+  height: auto;
+  background-color: var(--btn-color);
+  border-color: var(--btn-color);
+}
+
+.btn-new-primary:hover {
+  background-color: var(--btn-hover);
+  border-color: var(--btn-hover);
+}

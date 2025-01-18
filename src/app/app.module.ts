@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,7 +13,6 @@ import { AuthService } from './services/auth.service';
 
 @NgModule({
   imports: [
-    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     // Ant Design Modules
